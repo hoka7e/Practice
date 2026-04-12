@@ -20,10 +20,15 @@ insert_from_csv(config, "data.csv")
 query_all(config)
 
 # Обновление данных
-update_data(config, "Ali", new_phone="999999999")
+update_data(config, "Dana", new_phone="777777777777")
 
 # Удаление по имени
 delete_by_name(config, "Ali")
 
 # Финальный вывод
 query_all(config)
+
+
+
+
+
