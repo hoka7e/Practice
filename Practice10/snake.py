@@ -46,7 +46,7 @@ class Snake:
 
         if self.body[0].x > WIDTH // CELL - 1 or self.body[0].x < 0:
             self.alive = False
-        if self.body[0].y > HEIGHT // CELL - 1 or self.body[0].y == 0:
+        if self.body[0].y > HEIGHT // CELL - 1 or self.body[0].y < 0:
             self.alive = False
 
     def draw(self):
@@ -114,7 +114,7 @@ while running:
 
         pygame.time.wait(3000)
         pygame.quit()
-        sys.exit()   # <-- ВАЖНО
+        sys.exit()   
 
     sc = font.render(f'Score: {score}', True, colorWHITE)
     lv = font.render(f'Level: {level}', True, colorWHITE)

@@ -76,7 +76,7 @@ current_times = 0
 is_paused = False
 
 while not done:
-    if durations[music_index] > 0:                     # avoid division by zero
+    if durations[music_index] > 0:                     
         progress_ratio = current_times / durations[music_index]
         circle_x = 200 + progress_ratio * 900
     else:
@@ -122,8 +122,7 @@ while not done:
 
     start = get_start(h,m,s)
     end = get_start(durations[music_index]//3600, durations[music_index]//60, durations[music_index]%60)        
-    # end = font.render(f"{durations[music_index]//3600:.0f}:{durations[music_index]//60:.0f}:{durations[music_index]%60:.0f}", True, BLACK)
-
+    
     screen.blit(start, (210,420))
     screen.blit(end, (1050,420))
 
